@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Pandore";
+  src: url("/fonts/pandore-pandore-regular-400.otf") format("opentype"), url("/fonts/pandore-pandore-regular-400.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raneg";
+  src: url("/fonts/raneg-raneg-svg-400.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Daviton";
+  src: url("/fonts/daviton-daviton-brush-400.otf") format("opentype"), url("/fonts/daviton-daviton-brush-400.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Homizio";
+  src: url("/fonts/Homizio-dlB7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sauce One";
+  src: url("/fonts/OpenSauceOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bauhaus";
+  src: url("/fonts/BauhausRegular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Murmure";
+  src: url("/fonts/le-murmure.otf") format("opentype"), url("/fonts/le-murmure.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Soria";
+  src: url("/fonts/soria-font.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Magilio";
+  src: url("/fonts/MagilioRegular-Yzv2O.ttf") format("truetype");
+}
