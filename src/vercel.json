@@ -1,7 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/products/:id",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)", // Mengambil semua rute yang tidak ditemukan
       "destination": "/index.html"
     }
   ]
