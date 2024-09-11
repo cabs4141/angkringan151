@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/products/:id",
+      "destination": "/"
+    },
+    {
+      "source": "/cart",
+      "destination": "/cart"
+    },
+    {
+      "source": "/auth",
+      "destination": "/auth"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
