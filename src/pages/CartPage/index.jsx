@@ -104,7 +104,7 @@ const CartPage = () => {
     const userWa = response.data.data.username;
 
     // Format pesan sesuai dengan permintaan
-    const orderMessage = `P Admin,\nSaya *${userWa}* ingin memesan:\n\n${selectedProducts.join("\n")}\n\nAlamat: *${alamat}*\nNo HP: *${phone}*\n\nTotal: *${formatRupiah(totalHarga)}*`;
+    const orderMessage = `Halo Admin,\nSaya *${userWa}* ingin memesan:\n\n${selectedProducts.join("\n")}\n\nAlamat: *${alamat}*\nNo HP: *${phone}*\n\nTotal: *${formatRupiah(totalHarga)}*`;
 
     const encodedMessage = encodeURIComponent(orderMessage);
     const whatsappUrl = `whatsapp://send?phone=6285927748171&text=${encodedMessage}`;
