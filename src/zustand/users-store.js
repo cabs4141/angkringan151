@@ -1,6 +1,6 @@
 import axios from "axios";
 import { create } from "zustand";
-const apiUrl = import.meta.env.VITE_API_URL_PRODUCTION; // Pastikan menggunakan VITE_API_URL
+const apiUrl = import.meta.env.VITE_API_URL_LOCAL; // Pastikan menggunakan VITE_API_URL
 
 const useAuthStore = create((set) => ({
   token: localStorage.getItem("token") || null,

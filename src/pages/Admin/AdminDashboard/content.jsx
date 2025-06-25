@@ -11,7 +11,7 @@ const Content = () => {
   }, []);
   return (
     <>
-      <div className="min-h-screen px-4 pb-6 sm:px-6 lg:px-8 bg-gray-100 font-opensauce mt-14 xl:mt-10  ">
+      <div className="min-h-screen px-4 pb-6 sm:px-6 lg:px-8 bg-gray-100 font-opensauce mt-14 xl:mt-12  ">
         <div className="flex flex-row p-4 items-center justify-between">
           <h1 className="font-bold text-gray-500">Menu List</h1>
           <AddModal />
@@ -29,7 +29,7 @@ const Content = () => {
               </button>
             </div>
           </div>
-          <div>filter</div>
+          {/* <div>filter</div> */}
         </div>
         <hr className="border-t-2 border-gray-100 " />
         {/* Your content */}

@@ -23,7 +23,7 @@ function ProductsDetail() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const apiUrl = import.meta.env.VITE_API_URL_PRODUCTION;
+        const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
         const response = await axios.get(`${apiUrl}/products/${id}`);
         setProduct(response.data);
         setLoading(false);
@@ -116,7 +116,7 @@ function ProductsDetail() {
                   </div>
                   <p className="font-opensauce border-b-3 pb-2"> {product.description}</p>
                   <div className="flex justify-between">
-                    <div className="title-font font-semibold xl:text-2xl text-lg text-orange-400  my-4">{formatRupiah(product.price)}</div>
+                    <div className="title-font font-semibold xl:text-2xl text-lg text-blue-400  my-4">{formatRupiah(product.price)}</div>
                     <div className="flex w-[140px] items-center justify-center xl:justify-end">
                       {/* <BuyNowButton /> */}
                       <CartButton onClick={handleAddCart} img={"https://img.icons8.com/?size=100&id=15893&format=png&color=FFFFFF"} title={"+ Keranjang"} />

@@ -22,7 +22,7 @@ const ProductUnggulan = () => {
             .map((filteredData) => (
               <div key={filteredData._id || filteredData.id}>{filteredData.name}</div>
             ))} */}
-          Menu Unggulan
+          Produk unggulan
         </div>
 
         <div className="mt-2 xl:gap-4 gap-4 grid xl:grid-cols-5 lg:grid-cols-4 sm:grid-cols-3 grid-cols-2">

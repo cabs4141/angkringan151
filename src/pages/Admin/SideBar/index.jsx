@@ -1,12 +1,15 @@
 import React from "react";
 import AdminDashboard from "../AdminDashboard";
+import logo from "../../../assets/logo/rrtm.jpg";
 
 const SideBar = () => {
   return (
     <div className="flex ">
       {/* Sidebar */}
       <div className="sticky top-0 w-60   bg-white flex flex-col items-center justify-center h-screen  xs:hidden xl:block  ">
-        <div className="font-bauhaus text-orange-400 text-xl font-bold shadow-md   bg-white w-full  py-[12px] flex items-center justify-center">Angkringan151</div>
+        <div className="font-bauhaus text-orange-400 text-xl font-bold shadow-md   bg-white w-full  py-[12px] flex items-center justify-center">
+          <img src={logo} alt="admin" width={54} />
+        </div>
         <hr />
 
         <nav className=" bg-white w-full h-full shadow-xl font-semibold text-sm mt-10  ">

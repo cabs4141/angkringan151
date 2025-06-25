@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSearchProduct } from "../../zustand/products-store";
 
@@ -27,7 +26,7 @@ const SearchBar = () => {
         onKeyDown={handleEnter}
         onChange={handleInput}
         type="text"
-        placeholder="Cari di angkringan 151"
+        placeholder="Cari di RRTM Store"
         className="text-black placeholder:text-slate-600 placeholder:font-light border-gray-400 border rounded-lg pl-4 h-10 w-full font-opensauce text-sm focus:outline-none focus:border-none focus:ring-slate-400"
       />
       <div className="absolute rounded-lg right-[4px] items-center justify-center mt-1 mr-2">

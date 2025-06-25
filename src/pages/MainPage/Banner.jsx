@@ -1,12 +1,19 @@
 import { useState, useEffect } from "react";
+import banner1 from "../../assets/banner/rrtmbanner.png";
+import banner2 from "../../assets/banner/banner2.png";
+import banner3 from "../../assets/banner/banner3.png";
 
 const Banner = () => {
   const slides = [
-    { id: 1, imgSrc: "https://www.k24klik.com/blog/wp-content/uploads/2019/08/Notif-IG-MO-banner-1.jpg" },
+    { id: 1, imgSrc: banner1 },
     // { id: 2, imgSrc: "https://img.freepik.com/free-vector/hand-drawn-fast-food-sale-banner_23-2150970571.jpg" },
     {
       id: 3,
-      imgSrc: "https://pasardana.id/media/44751/website-restructure_banner-desktop-bahasa.jpg?crop=0.25986842105263142,0.0000000000000002243819165558,0,0&cropmode=percentage&width=675&height=380&rnd=132920037390000000",
+      imgSrc: banner2,
+    },
+    {
+      id: 4,
+      imgSrc: banner3,
     },
     // {
     //   id: 4,

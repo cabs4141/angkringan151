@@ -46,7 +46,7 @@ const OrderModal = ({ isOpen, onClose, onConfirm, orderItems, subTotal, setModal
             {cartProduct.length > 0 ? (
               <ul className="mb-4">
                 {cartProduct.map((item, index) => (
-                  <li key={index} className="text-sm font-medium mb-1 text-green-500">
+                  <li key={index} className="text-sm font-medium mb-1 text-blue-500">
                     {item.quantity} x {item.name} {/* Tampilkan quantity dan nama produk */}
                   </li>
                 ))}
@@ -72,7 +72,7 @@ const OrderModal = ({ isOpen, onClose, onConfirm, orderItems, subTotal, setModal
               onChange={(e) => setAlamat(e.target.value)}
               type="text"
               id="alamat"
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Masukkan alamat lengkap"
             />
           </div>
@@ -86,7 +86,7 @@ const OrderModal = ({ isOpen, onClose, onConfirm, orderItems, subTotal, setModal
               onChange={(e) => setPostalCode(e.target.value)}
               type="text"
               id="postalcode"
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Masukkan kode pos"
             />
           </div> */}
@@ -100,7 +100,7 @@ const OrderModal = ({ isOpen, onClose, onConfirm, orderItems, subTotal, setModal
               onChange={(e) => setCity(e.target.value)}
               type="text"
               id="kota"
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Masukkan kota"
             />
           </div> */}
@@ -114,7 +114,7 @@ const OrderModal = ({ isOpen, onClose, onConfirm, orderItems, subTotal, setModal
               onChange={(e) => setPhone(e.target.value)}
               type="text"
               id="nohp"
-              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="No HP"
             />
           </div>
@@ -124,7 +124,7 @@ const OrderModal = ({ isOpen, onClose, onConfirm, orderItems, subTotal, setModal
           <button onClick={onClose} className="bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-md">
             Batal
           </button>
-          <button onClick={handleSubmit} className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md">
+          <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
             Konfirmasi
           </button>
         </div>

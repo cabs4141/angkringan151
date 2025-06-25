@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/logo/logo4-Photoroom.png";
+import logo from "../../assets/logo/rrtm3.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import icon mata
 import { GoogleLogin } from "@react-oauth/google";
 import { notification } from "antd";
@@ -17,7 +17,7 @@ const Register = () => {
   const navigate = useNavigate();
   const { setToken, userDetails, fetchUserDetails } = useAuthStore();
 
-  const apiUrl = import.meta.env.VITE_API_URL_PRODUCTION;
+  const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -72,10 +72,8 @@ const Register = () => {
   return (
     <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img alt="Your Company" src={logo} className="mx-auto mb-[-10%] " width={140} />
-        <h1 className="flex items-center justify-center gap-2 mt-16 text-center text-xl font-bold font-opensauce leading-9 tracking-tight text-gray-900">
-          Daftar di <p className=" text-orange-500 text-[24px] font-bauhaus">Angkringan151</p>
-        </h1>
+        <img alt="Your Company" src={logo} className="mx-auto mb-[-10%] " width={160} />
+        <h1 className="flex items-center justify-center gap-2 mt-16 text-center text-xl font-bold font-opensauce leading-9 tracking-tight text-gray-900">Daftar di RRTM Store</h1>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -94,7 +92,7 @@ const Register = () => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -111,7 +109,7 @@ const Register = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -131,7 +129,7 @@ const Register = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
               />
               <button
                 type="button"
@@ -165,7 +163,7 @@ const Register = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -184,7 +182,7 @@ const Register = () => {
                 value={alamat}
                 onChange={(e) => setAlamat(e.target.value)}
                 required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -192,7 +190,7 @@ const Register = () => {
           <div>
             <button
               type="submit"
-              className="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+              className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
             >
               Daftar
             </button>
@@ -217,7 +215,7 @@ const Register = () => {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Sudah memiliki akun?
-          <button onClick={toLogin} className="font-semibold leading-6 text-orange-600 hover:text-orange-500 p-2">
+          <button onClick={toLogin} className="font-semibold leading-6 text-gray-600 hover:text-gray-500 p-2">
             Login
           </button>
         </p>

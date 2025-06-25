@@ -12,6 +12,7 @@ import MobileMenu from "./MobileMenu";
 import SearchBar from "./SearchBar";
 import SwapIcon from "./SwapIcon";
 import userIcon from "../../assets/icon/flexy-man-avatar-2.png";
+import logo from "../../assets/logo/rrtm3.png";
 
 const MyNavabar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,6 +28,10 @@ const MyNavabar = () => {
 
   const handleAuth = () => {
     navigate("/auth");
+  };
+
+  const handleReg = () => {
+    navigate("/register");
   };
 
   const handleLogout = () => {
@@ -88,8 +93,9 @@ const MyNavabar = () => {
         <div className="flex flex-col xl:flex-row xl:gap-10 gap-4 items-center">
           <div>
             <Link to="/">
-              <div className="xl:ml-6 bg-black xl:rounded-md">
-                <h1 className="flex text-orange-500 xl:text-2xl text-[28px] font-bauhaus font-semibold xl:w-[180px] w-screen h-auto items-center justify-center px-2 py-1">angkringan151</h1>
+              <div className="xl:ml-6 xl:rounded-md">
+                <img src={logo} alt="rrtmlogo" width={140} />
+                {/* <h1 className="flex text-green-500 xl:text-4xl text-[28px] font-murmure font-semibold xl:w-[180px] w-screen h-auto items-center justify-center">angkringan151</h1> */}
               </div>
             </Link>
           </div>
@@ -99,7 +105,7 @@ const MyNavabar = () => {
             </div>
             <SearchBar />
             <div className="flex flex-row gap-4 items-center justify-between">
-              <div className="flex items-center ml-4 xl:ml-0">
+              <div className="flex items-center ml-6 xl:ml-0">
                 <button className="flex" onClick={toCart}>
                   <div className="relative">
                     {cartItemCount > 0 ? <span className="absolute bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 mt-[-6px]">{cartItemCount}</span> : <span></span>}
@@ -127,7 +133,7 @@ const MyNavabar = () => {
                 ) : (
                   <div className="xl:ml-6">
                     <LoginButton title={"Masuk"} handleAuth={handleAuth} />
-                    <RegisterButton title={"Daftar"} />
+                    <RegisterButton title={"Daftar"} handleAuth={handleReg} />
                   </div>
                 )}
               </div>

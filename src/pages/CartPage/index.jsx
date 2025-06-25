@@ -27,6 +27,7 @@ const CartPage = () => {
   const [selectAll, setSelectAll] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [productIds, setProductIds] = useState([]);
+  const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
 
   //usestate payload
   const [alamat, setAlamat] = useState("");
@@ -94,9 +95,9 @@ const CartPage = () => {
       })
       .filter((item) => item !== ""); // Filter item yang kosong
 
-    // addOrder(payload);
-    // console.log(payload);
-    const response = await axios.get(`https://angkringan-express-production.up.railway.app/api/v1/users/${user}`, {
+    addOrder(payload);
+    console.log(payload);
+    const response = await axios.get(`${apiUrl}/users/${user}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -227,7 +228,7 @@ const CartPage = () => {
           type="warning"
           showIcon
           closable
-          icon={<DeliveryIcon style={{ color: "orange", fontSize: "20px", marginRight: "10px" }} />} // Menambahkan margin pada ikon
+          icon={<DeliveryIcon style={{ color: "blue", fontSize: "20px", marginRight: "10px" }} />} // Menambahkan margin pada ikon
           className="px-8 rounded-none text-xs font-opensauce"
         />
       ) : (
@@ -239,7 +240,7 @@ const CartPage = () => {
           <div className="flex flex-col gap-3 pb-24">
             {cartItems.map((cartItem) => (
               <div className="flex items-center gap-4 p-4 bg-gray-100 rounded-md shadow-sm" key={cartItem._id}>
-                <input type="checkbox" checked={selectedItems.includes(cartItem._id)} onChange={() => handleSelectItem(cartItem._id)} className="form-checkbox h-5 w-5 text-orange-400 focus:ring-0 rounded-md cursor-pointer " />
+                <input type="checkbox" checked={selectedItems.includes(cartItem._id)} onChange={() => handleSelectItem(cartItem._id)} className="form-checkbox h-5 w-5 text-blue-400 focus:ring-0 rounded-md cursor-pointer " />
                 <div className="w-[100px] h-[70px] overflow-hidden rounded">
                   <img src={cartItem.product.image} alt="cart image" className="object-cover w-full h-full" />
                 </div>
@@ -250,7 +251,7 @@ const CartPage = () => {
                     <button onClick={() => handleUpdateQuantity(cartItem._id, cartItem.quantity - 1)} className="bg-gray-200 p-1 px-3 rounded">
                       -
                     </button>
-                    <p className="text-orange-500 font-opensauce ">{cartItem.quantity}</p>
+                    <p className="text-blue-500 font-opensauce ">{cartItem.quantity}</p>
                     <button onClick={() => handleUpdateQuantity(cartItem._id, cartItem.quantity + 1)} className="bg-gray-200 p-1 px-3 rounded">
                       +
                     </button>
@@ -269,7 +270,7 @@ const CartPage = () => {
       {/* Bagian fixed untuk tombol beli */}
       <div className="fixed bottom-0 left-0 w-full bg-white shadow-md p-4 px-8 pb-12 xl:pb-6 flex justify-between items-center border-t-2">
         <div className="flex gap-2 items-center">
-          <input type="checkbox" className="form-checkbox h-5 w-5 text-orange-400 focus:ring-0  rounded-md cursor-pointer " checked={selectAll} onChange={handleSelectAll} />
+          <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-400 focus:ring-0  rounded-md cursor-pointer " checked={selectAll} onChange={handleSelectAll} />
           <div>Semua</div>
         </div>
         <div className="flex flex-row gap-4 font-opensauce">
@@ -277,7 +278,7 @@ const CartPage = () => {
             <div className="flex justify-end">Total</div>
             <div className="font-semibold">{formatRupiah(totalHarga)}</div>
           </div>
-          <button onClick={handleOrder} className={`p-2 flex items-center justify-center text-white rounded-lg w-20 ${selectedItems.length > 0 ? "bg-orange-400" : "bg-gray-400 cursor-not-allowed"}`} disabled={selectedItems.length === 0}>
+          <button onClick={handleOrder} className={`p-2 flex items-center justify-center text-white rounded-lg w-20 ${selectedItems.length > 0 ? "bg-blue-400" : "bg-gray-400 cursor-not-allowed"}`} disabled={selectedItems.length === 0}>
             <div className="flex gap-1 text-sm">
               <p>Pesan</p>
               {selectedItems.length > 0 ? <p>({selectedItems.length})</p> : <p></p>}

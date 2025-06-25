@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 import Loading from "../components/Loading";
-const apiUrl = import.meta.env.VITE_API_URL_PRODUCTION;
+const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
 
 const useGetCart = create((set, get) => ({
   cartItems: [],

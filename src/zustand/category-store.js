@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
-const apiUrl = import.meta.env.VITE_API_URL_PRODUCTION;
+const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
 
 const useCategory = create((set) => ({
   categories: [],

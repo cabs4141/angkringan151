@@ -55,8 +55,8 @@ export default function AddModal() {
 
   return (
     <>
-      <button onClick={toggleModal} className="xl:font-semibold py-1 px-3 bg-orange-400 rounded-md text-white text-xs h-8 ">
-        + Tambah Menu
+      <button onClick={toggleModal} className="xl:font-semibold py-1 px-3 bg-gray-600 rounded-md text-white text-xs h-8 ">
+        + Tambah Item
       </button>
       {/* <AddButton /> */}
 
@@ -95,7 +95,7 @@ export default function AddModal() {
                 <button type="button" className="px-4 py-1 bg-red-500 text-white rounded text-sm" onClick={toggleModal}>
                   Batal
                 </button>
-                <button type="submit" className="px-4 py-1 bg-blue-500 text-white rounded text-sm" disabled={loading}>
+                <button type="submit" className="px-4 py-1 bg-gray-600 text-white rounded text-sm" disabled={loading}>
                   Simpan
                 </button>
               </div>

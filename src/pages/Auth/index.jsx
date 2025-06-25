@@ -3,7 +3,7 @@ import axios from "axios";
 import { useAuthStore } from "../../zustand/users-store";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode"; // Pastikan mengimpor dari 'jwt-decode'
-import logo from "../../assets/logo/logo4-Photoroom.png";
+import logo from "../../assets/logo/rrtm3.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { notification } from "antd";
 import { GoogleLogin } from "@react-oauth/google";
@@ -15,7 +15,7 @@ const Auth = () => {
   const [password, setPassword] = useState("");
   const { setToken, userDetails, fetchUserDetails } = useAuthStore();
   const navigate = useNavigate();
-  const apiUrl = import.meta.env.VITE_API_URL_PRODUCTION;
+  const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
 
   const [isFetchingUser, setIsFetchingUser] = useState(false);
 
@@ -96,10 +96,8 @@ const Auth = () => {
   return (
     <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img alt="Your Company" src={logo} className="mx-auto mt-[-12%] xl:mt-[12%] xl:mb-[-10%] " width={130} />
-        <h1 className="flex items-center justify-center gap-2 mt-14 text-center text-xl font-bold font-opensauce leading-9 tracking-tight text-gray-900">
-          Masuk ke <p className=" text-orange-500 text-[24px] font-bauhaus">Angkringan151</p>
-        </h1>
+        <img alt="Your Company" src={logo} className="mx-auto mt-[-12%] xl:mt-[12%] xl:mb-[-10%] " width={190} />
+        <h1 className="flex items-center justify-center gap-2 mt-14 text-center text-xl font-bold font-opensauce leading-9 tracking-tight text-gray-900">Masuk ke RRTM Store</h1>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -117,7 +115,7 @@ const Auth = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 autoComplete="email"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
@@ -137,7 +135,7 @@ const Auth = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 autoComplete="current-password"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
               />
               <button type="button" className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5" onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? <FaEyeSlash size={20} color="gray" /> : <FaEye size={20} color="gray" />}
@@ -148,7 +146,7 @@ const Auth = () => {
           <div>
             <button
               type="submit"
-              className="flex w-full justify-center rounded-md bg-orange-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+              className="flex w-full justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
             >
               Masuk
             </button>
@@ -172,7 +170,7 @@ const Auth = () => {
 
         <p className="mt-10 text-center text-sm text-gray-500">
           Belum punya akun?
-          <button onClick={() => navigate("/register")} className="font-semibold leading-6 text-orange-600 hover:text-orange-500 p-2">
+          <button onClick={() => navigate("/register")} className="font-semibold leading-6 text-gray-600 hover:text-gray-500 p-2">
             Daftar disini
           </button>
         </p>

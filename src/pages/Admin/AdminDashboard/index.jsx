@@ -7,7 +7,7 @@ import Content from "./content";
 import { useAuthStore } from "../../../zustand/users-store";
 import MyFooter from "../../../components/MyFooter/MyFooter.jsx";
 import Modal from "../../../components/Modal/index.jsx";
-import adminIcon from "../../../assets/icon/admin5.png";
+import logo from "../../../assets/logo/rrtm.jpg";
 
 const AdminDashboard = () => {
   const { token, fetchUserDetails, userDetails, logout } = useAuthStore();
@@ -53,11 +53,11 @@ const AdminDashboard = () => {
       <Disclosure as="nav" className="fixed top-0 z-50 bg-white shadow-md w-full ">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-7xl xl:h-[52px] w-full px-4 sm:px-6 lg:px-8 transform transition-transform duration-300 ease-in-out">
+            <div className="mx-auto max-w-7xl xl:h-[78px] w-full px-4 sm:px-6 lg:px-8 transform transition-transform duration-300 ease-in-out">
               <div className="flex justify-between h-20  items-center px-4 ">
                 <div className="flex gap-2 items-center ">
-                  {/* <img src={adminIcon} alt="admin" width={54} /> */}
-                  <img src="https://img.icons8.com/?size=100&id=BWRr8y2fdHgJ&format=png&color=000000" alt="admin" width={38} />
+                  <img className="block sm:hidden" src={logo} alt="admin" width={54} />
+                  {/* <img src="https://img.icons8.com/?size=100&id=BWRr8y2fdHgJ&format=png&color=000000" alt="admin" width={38} /> */}
                   <p className="font-bold text-gray-700 text-md font-opensauce px-2">Admin </p>
                 </div>
                 <div className="hidden md:flex items-center space-x-4 mr-52">
