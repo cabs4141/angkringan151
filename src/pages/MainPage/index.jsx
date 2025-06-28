@@ -2,11 +2,10 @@ import { Alert, notification } from "antd";
 import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
-import TitlePage from "../../components/TitlePage";
-import { useGetCart } from "../../zustand/cart-store";
 import { useAuthStore } from "../../zustand/users-store";
 import Banner from "./Banner";
 import ProductUnggulan from "./ProductUnggulan";
+import Rekomendasi from "./Rekomendasi";
 
 const MainPage = () => {
   const { setToken, logout, token } = useAuthStore();
@@ -47,10 +46,9 @@ const MainPage = () => {
           <Banner />
         </div>
         <div className="flex flex-col xl:px-[40px] xl:items-start items-center xl:ml-3">
-          <div className="hidden xl:block lg:block">
-            <TitlePage title="Kategori pilihan" />
-          </div>
+          <div className="hidden xl:block lg:block"></div>
           <div className="border-b border-gray-300"></div>
+          <Rekomendasi />
           <ProductUnggulan />
         </div>
       </div>

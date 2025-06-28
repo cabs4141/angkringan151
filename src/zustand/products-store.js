@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useCallback } from "react";
 import { create } from "zustand";
 const apiUrl = import.meta.env.VITE_API_URL_LOCAL;
 
